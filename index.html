@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>главная страница</title>
+</head>
+<body>
+    <div class="block">
+        <div class="panel-toggle"></div>
+        <div class="panel one">
+            <div class="panel__header">
+                <h2 class="panel__title .one-title">ACCOUNT LOGIN</h2>
+            </div>
+            <div class="panel__content">
+                <form action="#" method="POST">
+                    <div class="panel__content-group">
+                        <label for="email">почта</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <label for="password">пароль</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <input type="submit" name="submit" value="войти">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel two">
+            <div class="panel__header">
+                <h2 class="panel__title .one-title">ACCOUNT register</h2>
+            </div>
+            <div class="panel__content">
+                <form action="#" method="POST">
+                    <div class="panel__content-group">
+                        <label for="email">почта</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <label for="email">фамилия</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <label for="email">имя</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <label for="email">отчество</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <label for="password">пароль</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="panel__content-group">
+                        <input type="submit" name="submit" value="добавить">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let panelTwo = document.querySelector('.two');
+        let panelOne = document.querySelector('.one');
+        let toggle = document.querySelector('.panel-toggle');
+        panelTwo.onclick = function(){
+            if(!this.classList.contains('active')){
+                this.classList.add('active');
+                panelOne.classList.add('active');
+                toggle.classList.add('active');
+                this.parentNode.classList.add('active');
+            }
+        };
+        toggle.onclick = function(){
+            panelOne.classList.remove('active');
+            panelTwo.classList.remove('active');
+            toggle.classList.remove('active');
+            this.parentNode.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
