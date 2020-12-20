@@ -178,3 +178,38 @@ input:focus{
     font-weight: 600;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px){
+    .panel{
+        padding: 60px 5% 60px 0;
+    }
+    .two{
+        padding: 60px 0 60px 60px;
+    }
+    .two.active{
+        left: 0;
+        padding: 60px 0;
+    }
+    .block{
+        border-radius: 0;
+    }
+    .panel-toggle{
+        right: 0;
+        transform: scale(0)  translate(25%,-25%);
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .panel-toggle.active{
+        transform: translate(25%,-25%);
+    }
+    .panel-toggle:before{
+        top: 60%;
+        left: 40%;
+    }
+    .panel-toggle:after{
+        top: 60%;
+        left: 40%;
+    }
+
+}
